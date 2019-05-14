@@ -1,0 +1,39 @@
+.game-root {
+    -fx-background-color: #faf8ef; 
+}
+.game-vbox {
+    -fx-background-color: #bbada0;
+    -fx-padding: 5 15 5 15;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+}
+.game-titScore {
+    -fx-font-size: 13px;
+    -fx-text-fill: #eee4da;
+}
+.game-score {
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+}
+.game-points {
+    -fx-font-size: 25px;
+    -fx-text-fill: rgba(119, 110, 101, 0.9);
+}
+.game-backGrid {
+    -fx-background-color: #bbada0;
+    -fx-border-color: #bbada0; 
+    -fx-border-width: 2; 
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+.game-grid {
+    -fx-background-color: #bbada0;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+}
+.game-grid-cell {
+    -fx-fill: #cdc1b4;
+    -fx-stroke-width: 14px;
+    -fx-stroke-type: centered;
+    -fx-stroke: #BBADA0;
+}
