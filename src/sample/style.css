@@ -175,3 +175,24 @@
     -fx-border-radius: 3;
 }
 
+
+.custom-text-field
+{
+    -fx-fill: transparent, white, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}
+
+.custom-text-field:hover
+{
+    -fx-fill: transparent, #909090, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}
+
+.custom-text-field:focused
+{
+    -fx-fill: transparent, #009EF, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;
+}

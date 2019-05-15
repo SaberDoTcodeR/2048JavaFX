@@ -25,15 +25,7 @@ public class Tile {
     }
 
     public static Tile takeRandomEmptyCell(ArrayList<ArrayList<Tile>> map) {
-        boolean flag = false;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (map.get(i).get(j).getNum() == 0)
-                    flag = true;
-            }
-        }
-        if (!flag)
-            return null;
+
         while (true) {
             int x = new Random().nextInt(16);
             if (map.get(x % 4).get(x / 4).getNum() == 0)
@@ -149,7 +141,7 @@ public class Tile {
         this.xPos = 113 + (LENGTH + 5) * j;
         this.yPos = 113 + (LENGTH + 5) * i;
 
-        if (!isNull && new Random().nextInt(10) > 2) {
+        if (!isNull && new Random().nextInt(10) > 1) {
             this.num = 2;
         } else if (!isNull)
             this.num = 4;
@@ -157,8 +149,9 @@ public class Tile {
     }
 
     public StackPane getStack() {
-        Rectangle rectangle = new Rectangle(this.xPos, this.yPos, LENGTH, LENGTH);
-        final Text text = new Text(num + "");
+
+        Text text = new Text(num + "");
+
         if (num < 10)
             text.setFont(new Font(25));
         else if (num < 100)
@@ -167,8 +160,8 @@ public class Tile {
             text.setFont(new Font(21));
         else
             text.setFont(new Font(20));
-
-        final StackPane stack = new StackPane();
+        Rectangle rectangle = new Rectangle(this.xPos, this.yPos, LENGTH, LENGTH);
+        StackPane stack = new StackPane();
         rectangle.setArcWidth(10);
         rectangle.setArcHeight(10);
         if (num != 0)
